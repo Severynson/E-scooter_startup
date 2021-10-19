@@ -104,7 +104,7 @@ header {
 .navigation button {
   background-color: #343a40;
   color: #fff;
-  font-size: 36px;
+  font-size: 3.6rem;
   border-radius: 9px;
   transition: all 0.3s;
 }
@@ -120,17 +120,17 @@ header {
 }
 
 .account span h3 {
-  font-size: 24px;
+  font-size: 2.4rem;
 }
 
-.navigation--btn {
+.account--btn {
   display: grid;
   grid-template-rows: 50% 50%;
   gap: 0.8rem;
   padding: 0.5rem 0.5rem 1rem 0.5rem;
 }
 
-.navigation--btn button {
+.account--btn button {
   background-color: #339af0;
   color: #fff;
   font-size: 20px;
@@ -138,8 +138,46 @@ header {
   transition: all 0.3s;
 }
 
-.navigation--btn button:hover {
+.account--btn button:hover {
   background-color: #4dabf7;
+}
+
+@media screen and (max-width: 1200px) {
+  .account span h3 {
+    font-size: 1.8rem;
+  }
+
+  .account--btn button {
+    font-size: 1.8rem;
+  }
+
+  .navigation button {
+    font-size: 2.8rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+
+  .account--btn button {
+    font-size: 1.4rem;
+    padding: 0 0 0.2rem 0;
+  }
+
+  .navigation button {
+    font-size: 2.3rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .navigation button {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 673px) {
+  .navigation button {
+    font-size: 0rem;
+  }
 }
 
 /* ******************* */
@@ -148,6 +186,8 @@ header {
 
 .intro-page {
   grid-template-columns: 1fr 1fr;
+  height: 100%;
+  width: 100%;
 }
 
 .intro-h1-and-button-div {
@@ -161,12 +201,15 @@ header {
 }
 
 .intro-page-img-div {
+  /* background-size: auto auto; */
+  display: grid;
+  height: 100%;
   overflow: hidden;
-  /* border: 1px solid black; */
 }
 
 .intro-page-img {
   width: 100%;
+  /* transform: scale(1.15); */
 }
 
 .start-and-details-btn-div {
@@ -209,19 +252,47 @@ header {
   color: #555;
 }
 
+@media screen and (max-width: 1200px) {
+  .intro-page {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    padding: 0 2rem;
+  }
+
+  .intro-page-img-div {
+    height: 100rem;
+  }
+
+  .intro-page div h1 {
+    font-size: 50px;
+    text-decoration: none;
+  }
+
+  .intro-page-and-header {
+    height: auto;
+    overflow: hidden;
+  }
+
+  .intro-h1-and-button-div {
+    padding-top: 3rem;
+    padding-left: 5rem;
+  }
+  
+}
+
 /* ******************* */
 /* FEATURES */
 /* ******************* */
 
 .section-features {
-  padding-top: 8rem;
+  padding-top: 6rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   align-items: center;
   justify-items: center;
-  padding-right: 19rem;
-  padding-left: 19rem;
+  padding-right: 22rem;
+  padding-left: 22rem;
   background-color: #fff;
   gap: 1rem;
   row-gap: 3rem;
